@@ -3,6 +3,8 @@
  */
 
 const { languages, defaultLanguage } = require("./languages");
+const siteUrl = process.env.URL || `https://fallback.net`;
+
 module.exports = {
   siteMetadata: {
     title: `gatsby-check`,
