@@ -2,13 +2,11 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const siteUrl = https://turn-digital.github.io;
-
 const { languages, defaultLanguage } = require("./languages");
 module.exports = {
   siteMetadata: {
     title: `gatsby-check`,
-    siteUrl,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     {
