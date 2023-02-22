@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./header";
+import Header from "./Header";
 import Footer from "../components/footer/Footer";
 
 // set app as default lv - resolve plugin bug
