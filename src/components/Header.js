@@ -1,6 +1,8 @@
 import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import React from "react";
 
+typeof window !== 'undefined' && localStorage.setItem('gatsby-i18next-language', 'lv');
+
 const Header = ({ siteTitle }) => {
   const { languages, originalPath, t, i18n } = useI18next();
   return (
