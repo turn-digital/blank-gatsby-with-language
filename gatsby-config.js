@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const siteUrl = "https://gatsby.locize.com";
+const siteUrl = "https://turn-digital.github.io";
 
 const { languages, defaultLanguage } = require("./languages");
 module.exports = {
