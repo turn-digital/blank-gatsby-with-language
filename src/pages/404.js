@@ -1,49 +1,43 @@
-import * as React from "react"
-import { Link } from "gatsby"
+// i18next-extract-mark-ns-start 404
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import React from "react";
+import Layout from "../components/layout";
+import HeadMeta from "../components/HeadMeta";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
 
-const NotFoundPage = () => {
+const NotFoundPage = (props) => {
+  const { t } = useTranslation();
+  const footerInfo = {
+    title: t("Footer_Title_Index"),
+    phone: t("Footer_Phone_Index"),
+    email: t("Footer_Email_Index"),
+    fbLink: t("Footer_FbLink_Index"),
+    fbInLink: t("Footer_InLink_Index"),
+  };
+
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <>
+      <HeadMeta
+        title={`${t("Meta_Title")} | ${t("Meta_Title")}`}
+        description={t("Meta_Desc")}
+      />
+      <Layout footerInfo={footerInfo}>
+        <h1>{t("404:NOT_FOUND")}</h1>
+        <p>{t("404:ERROR_TEXT")}</p>
+      </Layout>
+    </>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["common", "index", "404"])),
+//       // Will be passed to the page component as props
+//     },
+//   };
+// }

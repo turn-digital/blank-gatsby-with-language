@@ -1,0 +1,137 @@
+.hero {
+  position: relative;
+  padding-bottom: 28px;
+  overflow: hidden;
+
+  &__box {
+    position: relative;
+  }
+
+  &__wrap {
+    padding-top: 24px;
+  }
+
+  &__content {
+    padding-top: 26px;
+
+    h3 {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    p + h3 {
+      margin-top: 16px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      color: $color-primary;
+      font-size: 18px;
+      line-height: 24px;
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 2px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: block;
+        background-color: $color-primary;
+        content: "";
+      }
+
+      & + li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__bg {
+    position: relative;
+    padding-bottom: 40%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__title {
+    padding-top: 16px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 64px;
+  }
+
+  @media (min-width: $media-bp-tablet) {
+    &__bg {
+      max-height: 600px;
+    }
+    padding-bottom: 56px;
+
+    &__image {
+      padding-bottom: 35%;
+    }
+  }
+
+  @media (min-width: $media-bp-laptop) {
+    padding-bottom: 100px;
+
+    &__wrap {
+      padding-top: 64px;
+    }
+
+    &__content {
+      padding-top: 32px;
+
+      h3 {
+        font-size: 36px;
+        line-height: 38px;
+      }
+
+      p + h3 {
+        margin-top: 32px;
+      }
+
+      ul {
+        margin-top: 12px;
+      }
+
+      li {
+        padding-left: 40px;
+        font-size: 20px;
+        line-height: 32px;
+
+        &:before {
+          top: 14px;
+          left: 12px;
+        }
+
+        & + li {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    &__title {
+      font-size: 88px;
+      line-height: 104px;
+    }
+  }
+
+  @media (min-width: $media-bp-laptopXL) {
+    &__bg {
+      padding-bottom: 600px;
+    }
+  }
+}

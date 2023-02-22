@@ -1,0 +1,23 @@
+ <!-- public/sitemap.xml -->
+   <xml version="1.0" encoding="UTF-8">
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     <url>
+       <loc>https://www.artisozolins.lv/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/pasakumu-vaditajs/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/diskusiju-moderators/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/radio-personiba/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/en</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/en/pasakumu-vaditajs/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/en/diskusiju-moderators/</loc>
+       <lastmod>2022-17-01</lastmod>
+       <loc>https://www.artisozolins.lv/en/radio-personiba/</loc>
+       <lastmod>2022-17-01</lastmod>
+     </url>
+   </urlset>
+   </xml>

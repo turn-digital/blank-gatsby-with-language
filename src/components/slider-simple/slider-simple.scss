@@ -1,0 +1,60 @@
+.slider-simple {
+  .slick-dots {
+    bottom: -44px;
+    
+    li {
+      margin: 0;
+      width: auto;
+      height: auto;
+
+      &.slick-active {
+        button {
+          &:before {
+            background-color: $color-secondary;
+          }
+
+          &:hover {
+            &:before {
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+
+      & + li {
+        margin-left: 10px;
+      }
+    }
+
+    button {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      padding: 10px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $color-silver;
+        content: '';
+        font-size: 0;
+        line-height: 0;
+        opacity: 1;
+        transform: translate(-50%,-50%);
+        transition: $transition-ease-out-fast;
+      }
+
+      &:hover {
+        opacity: 0.7;
+
+        &:before {
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}

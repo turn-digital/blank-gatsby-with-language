@@ -1,0 +1,40 @@
+.clients {
+  padding: 26px 0 22px;
+  background-color: $color-snow;
+
+  &__list {
+    margin-top: 4px;
+  }
+
+  &__img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: $media-bp-phone) {
+     &__list {
+      display: flex;
+      flex-wrap: wrap;
+     }
+  }
+
+  @media (min-width: $media-bp-tablet) {
+    padding: 56px 0 44px;
+
+    &__list {
+      margin-top: 24px;
+    }
+
+    &__img {
+      width: 33.33%;
+    }
+  }
+
+  @media (min-width: $media-bp-tabletL) {
+    &__img {
+      width: 25%;
+    }
+  }
+}

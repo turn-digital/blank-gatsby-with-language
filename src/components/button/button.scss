@@ -1,0 +1,70 @@
+.button {
+	position: relative;
+	padding: 7px;
+	border: 1px solid $color-secondary;
+	border-radius: 32px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	color: $color-secondary;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+
+	&__icon {
+		position: relative;
+		margin-right: 8px;
+		width: 30px;
+		height: 30px;
+		border: 1px solid $color-secondary;
+		border-radius: 50%;
+		display: inline-block;
+		transition: $transition-ease-out-fast;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 15px;
+			width: 15px;
+			display: inline-block;
+			transform: translate(-50%,-50%);
+
+			path {
+				fill: $color-secondary;
+				transition: $transition-ease-out-fast;
+			}
+		}
+	}
+
+	&--fb {
+		max-width: 288px;
+	}
+
+	&:after {
+		@include absolute-position;
+		z-index: -1;
+		border-radius: 32px;
+		background-color: $color-secondary;
+		content: '';
+		transform: translateX(-110%) scale(1.1);
+		transition: $transition-ease-out-fast;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-white;
+
+		&:after {
+			transform: translateX(0) scale(1.1);
+		}
+
+		.button__icon {
+			border-color: $color-white;
+
+			svg path {
+				fill: $color-white;
+			}
+		}
+	}
+}
