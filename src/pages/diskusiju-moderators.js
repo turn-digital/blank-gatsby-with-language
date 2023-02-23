@@ -7,9 +7,16 @@ import Hero from "../components/hero/Hero";
 import ArticleCard from "../components/article-card/ArticleCard";
 import Reviews from "../components/reviews/Reviews";
 import Button from "../components/button/Button";
-
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
+
+import heroImage from "../images/moderators.jpg";
+import firstArticleImage from "../images/moderator-event-disc.jpg";
+import secondArticleImage from "../images/moderator-event-lbp-2.png";
+import thirdArticleImage from "../images/moderator-event-DFF.jpg";
+
+import firstReviewImage from "../images/janis-andzans.jpg";
+import secondReviewImage from "../images/anete-ugaine.jpg";
 
 const DiscussionModerator = ({ data }) => {
   const { t } = useTranslation();
@@ -27,19 +34,19 @@ const DiscussionModerator = ({ data }) => {
   };
   const articles = [
     {
-      item: "/moderator-event-disc.jpg",
+      item: firstArticleImage,
       type: "image",
       title: t("Article_1_Title"),
       content: t("Article_1_Content"),
     },
     {
-      item: "/moderator-event-lbp-2.png",
+      item: secondArticleImage,
       type: "image",
       title: t("Article_2_Title"),
       content: t("Article_2_Content"),
     },
     {
-      item: "/moderator-event-DFF.jpg",
+      item: thirdArticleImage,
       type: "image",
       title: t("Article_3_Title"),
       content: t("Article_3_Content"),
@@ -52,14 +59,14 @@ const DiscussionModerator = ({ data }) => {
       position: t("Review_1_Position"),
       event: t("Review_1_Event"),
       content: t("Review_1_Content"),
-      image: "/janis-andzans.jpg",
+      image: firstReviewImage,
     },
     {
       name: t("Review_2_Title"),
       position: t("Review_2_Position"),
       event: t("Review_2_Event"),
       content: t("Review_2_Content"),
-      image: "/anete-ugaine.jpg",
+      image: secondReviewImage,
     },
   ];
 
@@ -95,7 +102,7 @@ const DiscussionModerator = ({ data }) => {
       />
       <Layout footerInfo={footerInfo}>
         <div className="page page--wedding">
-          <Hero type="wedding" info={heroInfo} image={"/moderators.jpg"} />
+          <Hero type="wedding" info={heroInfo} image={heroImage} />
           <div className="page__articles">
             <ArticleCard article={articles} imagesAlt={articlesImagesAlt} />
           </div>

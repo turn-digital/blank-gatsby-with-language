@@ -2,12 +2,14 @@ import React from "react";
 import HeadMeta from "../components/HeadMeta";
 import Layout from "../components/layout";
 import Hero from "../components/hero/Hero";
-// import Reviews from "../components/reviews/Reviews";
 import ArticleCard from "../components/article-card/ArticleCard";
 import Button from "../components/button/Button";
-
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
+
+import heroImage from "../images/radioHomePage.jpg";
+import firstArticleImage from "../images/DigitalasBrokastis.jpeg";
+import secondArticleImage from "../images/RadioNaba.jpeg";
 
 const RadioPersona = (props) => {
   const { t } = useTranslation();
@@ -26,13 +28,13 @@ const RadioPersona = (props) => {
 
   const articles = [
     {
-      item: "/DigitalasBrokastis.jpeg",
+      item: firstArticleImage,
       type: "image",
       title: t("Article_1_Title"),
       content: t("Article_1_Content"),
     },
     {
-      item: "/RadioNaba.jpeg",
+      item: secondArticleImage,
       type: "image",
       title: t("Article_2_Title"),
       content: t("Article_2_Content"),
@@ -68,14 +70,12 @@ const RadioPersona = (props) => {
       />
       <Layout footerInfo={footerInfo}>
         <div className="page page--wedding">
-          <Hero type="wedding" info={heroInfo} image={"/radioHomePage.jpg"} />
+          <Hero type="wedding" info={heroInfo} image={heroImage} />
 
           <div className="page__articles">
             <ArticleCard article={articles} imagesAlt={articlesImagesAlt} />
           </div>
           <div className="page__reviews">
-            {/* there is 0 reviews on this page */}
-            {/* <Reviews reviews={reviews} /> */}
             <div className="page__reviews-btn">
               <div className="wrapper">
                 <Button

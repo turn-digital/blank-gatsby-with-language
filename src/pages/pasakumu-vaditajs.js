@@ -6,9 +6,16 @@ import Hero from "../components/hero/Hero";
 import ArticleCard from "../components/article-card/ArticleCard";
 import Reviews from "../components/reviews/Reviews";
 import Button from "../components/button/Button";
-
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
+
+import heroImage from "../images/pasakuma-vaditajs-hero-2021.jpg";
+import firstArticleImage from "../images/event-naba.jpg";
+import secondArticleImage from "../images/eventIgnition.jpg";
+import thirdArticleImage from "../images/event-inovuss.jpg";
+
+import firstReviewImage from "../images/elita-apine.jpg";
+import secondReviewImage from "../images/santa-zunda.jpg";
 
 const EwentOrganiser = ({ data }) => {
   const { t } = useTranslation();
@@ -26,19 +33,19 @@ const EwentOrganiser = ({ data }) => {
   };
   const articles = [
     {
-      item: "/event-naba.jpg",
+      item: firstArticleImage,
       type: "image",
       title: t("Article_1_Title"),
       content: t("Article_1_Content"),
     },
     {
-      item: "/eventIgnition.jpg",
+      item: secondArticleImage,
       type: "image",
       title: t("Article_2_Title"),
       content: t("Article_2_Content"),
     },
     {
-      item: "/event-inovuss.jpg",
+      item: thirdArticleImage,
       type: "image",
       title: t("Article_3_Title"),
       content: t("Article_3_Content"),
@@ -51,14 +58,14 @@ const EwentOrganiser = ({ data }) => {
       position: t("Review_1_Position"),
       event: t("Review_1_Event"),
       content: t("Review_1_Content"),
-      image: "/elita-apine.jpg",
+      image: firstReviewImage,
     },
     {
       name: t("Review_2_Title"),
       position: t("Review_2_Position"),
       event: t("Review_2_Event"),
       content: t("Review_2_Content"),
-      image: "/santa-zunda.jpg",
+      image: secondReviewImage,
     },
   ];
 
@@ -94,11 +101,7 @@ const EwentOrganiser = ({ data }) => {
       />
       <Layout footerInfo={footerInfo}>
         <div className="page page--wedding">
-          <Hero
-            type="wedding"
-            info={heroInfo}
-            image={"/pasakuma-vaditajs-hero-2021.jpg"}
-          />
+          <Hero type="wedding" info={heroInfo} image={heroImage} />
           <div className="page__articles">
             <ArticleCard article={articles} imagesAlt={articlesImagesAlt} />
           </div>
