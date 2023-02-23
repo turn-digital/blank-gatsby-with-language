@@ -1,10 +1,6 @@
 import React from "react";
-// import Link from "next/link";
-// import AniLink from "gatsby-plugin-transition-link/AniLink";
-// import SvgCircle from "../SvgCircle";
-import moderatorsImage from "../../images/moderators.jpg";
-import pasakumaImage from "../../images/pasakuma-vaditajs-hero.jpg";
-import radioImage from "../../images/radioHomePage.jpg";
+import patternSvg from "../../images/pattern-round-blade.svg";
+import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const OverviewBlock = ({ title, content, activitiesAlt, anchorName }) => {
@@ -23,14 +19,16 @@ const OverviewBlock = ({ title, content, activitiesAlt, anchorName }) => {
                   : "activities__image"
               }`}
             >
-              {/* <SvgCircle /> */}
+              <img
+                className="activities__image-blade"
+                src={patternSvg}
+                alt="Svg pattern - grey circle"
+              />
               <div className={`activities__image-tag pasakumu-vaditajs`}>
-                <img
-                  src={pasakumaImage}
+                <StaticImage
+                  src="../../images/pasakuma-vaditajs-hero.jpg"
                   alt={event}
                   placeholder="blurred"
-                  objectFit="cover"
-                  layout="fill"
                 />
               </div>
             </div>
@@ -48,14 +46,16 @@ const OverviewBlock = ({ title, content, activitiesAlt, anchorName }) => {
                   : "activities__image"
               }`}
             >
-              {/* <SvgCircle /> */}
+              <img
+                className="activities__image-blade"
+                src={patternSvg}
+                alt="Svg pattern - grey circle"
+              />
               <div className={`activities__image-tag diskusiju-moderators`}>
-                <img
-                  src={moderatorsImage}
+                <StaticImage
+                  src="../../images/moderators.jpg"
                   alt={moderator}
                   placeholder="blurred"
-                  objectFit="cover"
-                  layout="fill"
                 />
               </div>
             </div>
@@ -70,14 +70,16 @@ const OverviewBlock = ({ title, content, activitiesAlt, anchorName }) => {
                   : "activities__image"
               }`}
             >
-              {/* <SvgCircle /> */}
+              <img
+                className="activities__image-blade"
+                src={patternSvg}
+                alt="Svg pattern - grey circle"
+              />
               <div className={`activities__image-tag radio-personiba`}>
-                <img
-                  src={radioImage}
+                <StaticImage
+                  src="../../images/radioHomePage.jpg"
                   alt={radio}
                   placeholder="blurred"
-                  objectFit="cover"
-                  fill
                 />
               </div>
             </div>

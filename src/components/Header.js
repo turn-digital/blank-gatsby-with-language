@@ -1,5 +1,6 @@
 import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import PropTypes from "prop-types";
+import "./header.css";
 import React from "react";
 
 const isBrowser = typeof window !== "undefined";

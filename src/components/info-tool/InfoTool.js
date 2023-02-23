@@ -1,5 +1,9 @@
 import React from "react";
 import IconMessenger from "../icon/MessengerIcon";
+import iconPhone from "../../images/icon-phone.svg";
+import iconEmail from "../../images/icon-email.svg";
+import iconArrow from "../../images/icon-arrow--small.svg";
+import iconTarget from "../../images/icon-target.svg";
 
 let lastScrollY = 0;
 
@@ -36,13 +40,6 @@ class InfoTool extends React.Component {
       popupVisible: !prevState.popupVisible,
     }));
   }
-
-  // isInViewport(offset = 0) {
-  //   if (!this.yourElement) return false;
-  //   const top = this.yourElement.getBoundingClientRect().top;
-  //   return (top + offset) >= 0 && (top - offset) <= window.innerHeight;
-  // }
-
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -94,13 +91,11 @@ class InfoTool extends React.Component {
             }`}
           >
             <p className="info-tool__show-text">{arrowTitle}</p>
-            <picture>
-              <img
-                className="info-tool__show-icon"
-                src="/icon-target.svg"
-                alt="Spinned arrow"
-              />
-            </picture>
+            <img
+              className="info-tool__show-icon"
+              src={iconTarget}
+              alt="Spinned arrow"
+            />
           </div>
           <div className="info-tool__info">
             <div
@@ -109,18 +104,8 @@ class InfoTool extends React.Component {
               onKeyDown={this.toggleInfoBox}
               role="presentation"
             >
-              <img
-                src="/icon-phone.svg"
-                alt="Phone icon"
-                width={30}
-                height={30}
-              />
-              <img
-                src="/icon-email.svg"
-                alt="Email icon"
-                width={30}
-                height={30}
-              />
+              <img src={iconPhone} alt="Phone icon" />
+              <img src={iconEmail} alt="Email icon" />
             </div>
             <div className="info-tool__info-content">
               <h4 className="info-tool__info-title">{info.title}</h4>
@@ -134,16 +119,14 @@ class InfoTool extends React.Component {
                   {info.heroEmail}
                 </a>
               </p>
-              <picture>
-                <img
-                  role="presentation"
-                  className="info-tool__info-arrow"
-                  src="/icon-arrow--small.svg"
-                  alt="Right arrow icon"
-                  onClick={this.toggleInfoBox}
-                  onKeyDown={this.toggleInfoBox}
-                />
-              </picture>
+              <img
+                role="presentation"
+                className="info-tool__info-arrow"
+                src={iconArrow}
+                alt="Right arrow icon"
+                onClick={this.toggleInfoBox}
+                onKeyDown={this.toggleInfoBox}
+              />
             </div>
           </div>
           <div className="info-tool__fb">

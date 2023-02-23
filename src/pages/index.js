@@ -52,7 +52,6 @@ export default function Home(props) {
         description={t("Meta_Desc")}
       />
       <Layout footerInfo={footerInfo}>
-        {t("Home_Hero_Title")}
         <div className="page page--home">
           <Hero type="home" info={heroInfo} />
           <Overview activitiesAlt={activitiesAlt} />

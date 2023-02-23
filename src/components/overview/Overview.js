@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 const OverviewBlock = (activitiesAlt) => {
   const { event, moderator, radio } = activitiesAlt.activitiesAlt;
@@ -8,41 +9,29 @@ const OverviewBlock = (activitiesAlt) => {
         <ul className="overview__list">
           <li className="overview__item">
             <div className="overview__image">
-              <picture>
-                <img
-                  src="/sakums-parskats-1.jpg"
-                  alt={event}
-                  placeholder="blurred"
-                  objectFit="cover"
-                  layout="fill"
-                />
-              </picture>
+              <StaticImage
+                src="../../images/sakums-parskats-1.jpg"
+                alt={event}
+                placeholder="blurred"
+              />
             </div>
           </li>
           <li className="overview__item">
             <div className="overview__image">
-              <picture>
-                <img
-                  src="/moderators.jpg"
-                  alt={moderator}
-                  placeholder="blurred"
-                  objectFit="cover"
-                  layout="fill"
-                />
-              </picture>
+              <StaticImage
+                src="../../images/moderators.jpg"
+                alt={moderator}
+                placeholder="blurred"
+              />
             </div>
           </li>
           <li className="overview__item">
             <div className="overview__image">
-              <picture>
-                <img
-                  src="/kazu-vaditajs-hero.jpg"
-                  alt={radio}
-                  placeholder="blurred"
-                  objectFit="cover"
-                  layout="fill"
-                />
-              </picture>
+              <StaticImage
+                src="../../images/kazu-vaditajs-hero.jpg"
+                alt={radio}
+                placeholder="blurred"
+              />
             </div>
           </li>
         </ul>

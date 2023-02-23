@@ -1,0 +1,21 @@
+.language {
+  padding-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 25px;
+  text-align: right;
+  color: #ddd;
+}
+.language a:nth-child(n + 2) {
+  padding-left: 16px;
+  margin-left: 16px;
+  border-left: 1px solid #ddd;
+}
+.language a {
+  color: #606060;
+}
+.language .current {
+  color: #4333ff;
+}
+.language a:hover {
+  color: #fb9116;
+}

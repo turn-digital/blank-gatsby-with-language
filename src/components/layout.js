@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "../components/footer/Footer";
+import "./layout.css";
+import "../styles/style.scss";
 
 // set app as default lv - resolve plugin bug
 typeof window !== "undefined" &&

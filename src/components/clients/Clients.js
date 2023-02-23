@@ -1,37 +1,46 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import fbLogo from "../../images/logo-facebook.svg";
+import lbpLogo from "../../images/logo-lbp.svg";
+import luLogo from "../../images/logo-lu.svg";
+import iiLogo from "../../images/ideju-instituts-logo.svg";
+import golinLogo from "../../images/golin-logo.svg";
+import rtuLogo from "../../images/logo-rtu.svg";
+import liaaLogo from "../../images/liaa-logo.svg";
+import tetLogo from "../../images/Tet_logo.svg";
 
 const Clients = (props) => {
   const clientsList = [
     {
-      logo: "/logo-facebook.svg",
+      logo: fbLogo,
       alt: "Facebook logo",
     },
     {
-      logo: "/logo-lbp.svg",
+      logo: lbpLogo,
       alt: "LBP logo",
     },
     {
-      logo: "/logo-lu.svg",
+      logo: luLogo,
       alt: "LU logo",
     },
     {
-      logo: "/ideju-instituts-logo.svg",
+      logo: iiLogo,
       alt: "Ideju institūta logo",
     },
     {
-      logo: "/golin-logo.svg",
+      logo: golinLogo,
       alt: "Golin logo",
     },
     {
-      logo: "/logo-rtu.svg",
+      logo: rtuLogo,
       alt: "RTU logo",
     },
     {
-      logo: "/liaa-logo.svg",
+      logo: liaaLogo,
       alt: "LIAA logo",
     },
     {
-      logo: "/Tet_logo.svg",
+      logo: tetLogo,
       alt: "TET logo",
     },
   ];
@@ -44,10 +53,7 @@ const Clients = (props) => {
         <div className="clients__list">
           {clientsList.map((anObjectMapped, index) => (
             <picture key={index} className="clients__img">
-              <img
-                src={anObjectMapped.logo}
-                alt={`${anObjectMapped.alt}`}
-              />
+              <img src={anObjectMapped.logo} alt={`${anObjectMapped.alt}`} />
             </picture>
           ))}
         </div>
