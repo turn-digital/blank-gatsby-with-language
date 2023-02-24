@@ -1,6 +1,6 @@
 import React from "react";
 import SimpleSlider from "../../components/slider-simple/SliderSimple";
-// import patternLine from "/pattern-line.svg";
+import patternLine from "../../images/pattern-line.svg";
 
 const ArticleAuthor = (props) => {
   const author = props.author;
@@ -36,7 +36,7 @@ const ArticleImage = (props) => {
           {content.title}
           <span>
             <picture>
-              <img src="/pattern-line.svg" alt="Pattern line" />
+              <img src={patternLine} alt="Pattern line" />
             </picture>
           </span>
         </h3>
@@ -65,7 +65,7 @@ const ArticleVideo = (props) => {
           {content.title}
           <span>
             <picture>
-              <img src="/pattern-line.svg" alt="Pattern line" />
+              <img src={patternLine} alt="Pattern line" />
             </picture>
           </span>
         </h3>
@@ -92,7 +92,7 @@ const ArticleSlider = (props) => {
           {content.title}
           <span>
             <picture>
-              <img src="/pattern-line.svg" alt="Pattern line" />
+              <img src={patternLine} alt="Pattern line" />
             </picture>
           </span>
         </h3>
