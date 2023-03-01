@@ -1,9 +1,6 @@
-// i18next-extract-mark-ns-start 404
-
 import React from "react";
 import Layout from "../components/layout";
 import HeadMeta from "../components/HeadMeta";
-
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
@@ -33,11 +30,21 @@ const NotFoundPage = (props) => {
 
 export default NotFoundPage;
 
-// export async function getStaticProps({ locale }) {
-//   return {
-//     props: {
-//       ...(await serverSideTranslations(locale, ["common", "index", "404"])),
-//       // Will be passed to the page component as props
-//     },
-//   };
-// }
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: { in: ["common", "index", "404"] }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
