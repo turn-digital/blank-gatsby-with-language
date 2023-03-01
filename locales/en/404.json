@@ -4,7 +4,9 @@
   "Meta_Desc": "Vadu dažāda veida pasākumus – sākot no korporatīvajiem līdz izklaides, gan lielus, gan mazus, latviski un angliski. Improvizācijas teātris un radio raidījuma vadīšana man devusi spēju arī moderēt dažāda veida diskusijas un iedegt dzirksteles cilvēku acīs, vadot kāzas.",
   "Meta_Url": "https://www.artisozolins.lv",
 
-  "404: Not_found": "404: Not found",
-  "NOT_FOUND": "NOT FOUND",
-  "ERROR_TEXT": "You just hit a route that doesn't exist... the sadness."
+  "LABEL": "whoops! Error ...",
+  "TITLE": "Page Not Found",
+  "DESC": "Looks like this page went on vacation.",
+  "LINK": "Try our homepage instead.",
+  "ALT": "404 number with microphone"
 }

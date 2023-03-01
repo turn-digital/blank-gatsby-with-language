@@ -4,6 +4,7 @@
 @import "grid-settings";
 @import "mixins";
 @import "global";
+@import "language";
 
 @import "../components/activities/activities";
 @import "../components/article-card/article-card";
@@ -16,3 +17,19 @@
 @import "../components/reviews/reviews";
 @import "../components/slider/slider";
 @import "../components/slider-simple/slider-simple";
+
+@import "./pages/notfound";
+
+img {
+    max-width: 100%;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    &__content {
+        flex: 1;
+    }
+}

@@ -1,0 +1,85 @@
+.notfound {
+    overflow: hidden;
+    background-color: $color-primary;
+
+    &__box {
+        position: relative;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+
+        &:after {
+            position: absolute;
+            z-index: 0;
+            width: 659px;
+            height: 659px;
+            left: 50%;
+            top: 50%;
+            content: "";
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 89.06%);
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    &__content {
+       position: relative;
+       z-index: 1;
+    }
+
+    &__label {
+        margin-bottom: 140px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    &__title {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    &__desc,
+    &__link {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .page__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .language {
+        a {
+            color: $color-stone--light;
+
+            &.current {
+                color: $color-white;
+            }
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+
+    p, h1, a {
+        color: $color-white;
+    }
+
+    @media (min-width: $media-bp-tablet) {
+        &__label {
+            margin-bottom: 100px;
+        }
+    
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}

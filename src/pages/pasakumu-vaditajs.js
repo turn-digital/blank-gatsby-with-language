@@ -10,7 +10,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
 import heroImage from "../images/pasakuma-vaditajs-hero-2021.jpg";
-import firstArticleImage from "../images/event-naba.jpg";
+import firstArticleImage from "../images/DTA.jpeg";
 import secondArticleImage from "../images/eventIgnition.jpg";
 import thirdArticleImage from "../images/event-inovuss.jpg";
 

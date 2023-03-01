@@ -1,0 +1,23 @@
+.language {
+  padding: 24px;
+  text-align: right;
+  color: $color-silver;
+
+  a {
+    color: $color-stone;
+
+    &.current {
+      color: $color-secondary;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+
+    & + a {
+      padding-left: 16px;
+      margin-left: 16px;
+      border-left: 1px solid $color-silver;
+    }
+  }
+}
